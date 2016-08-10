@@ -7,12 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import <Google/Analytics.h>
+//#import "AFNetworkActivityLogger.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    _catMap = [[NSArray alloc] initWithObjects:@"Groceries", @"Off-License", @"Pubs & Bars", @"Coffee & Cafes", @"Food", @"Hair & Beauty", @"Other", nil];
+    
+    // Configure tracker from GoogleService-Info.plist.
+    NSError *configureError;
+    [[GGLContext sharedInstance] configureWithError:&configureError];
+    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+    
+    // Optional: configure GAI options.
+    GAI *gai = [GAI sharedInstance];
+    gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
+    //gai.logger.logLevel = kGAILogLevelVerbose;
+    
     return YES;
 }
 							

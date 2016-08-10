@@ -1,0 +1,5 @@
+#include "Pods-HurryHereNow2-SDWebImage.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/SDWebImage" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFBlurSegue" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/FXForms" "${PODS_ROOT}/Headers/Public/Google" "${PODS_ROOT}/Headers/Public/Google/Google" "${PODS_ROOT}/Headers/Public/GoogleAnalytics" "${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities" "${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities" "${PODS_ROOT}/Headers/Public/GoogleUtilities" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/SVProgressHUD" "${PODS_ROOT}/Headers/Public/WYPopoverController"
+OTHER_LDFLAGS = ${PODS_HURRYHERENOW__SDWEBIMAGE_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
